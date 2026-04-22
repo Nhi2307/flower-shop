@@ -1,23 +1,21 @@
-## Building Management - Hệ thống quản lý tòa nhà
+## Flower Shop - Website Quản Lý Bán Hoa  
 
 ## Giới thiệu
-Hệ thống quản lý tòa nhà được xây dựng trong khuôn khổ đồ án môn Công nghệ phần mềm - Năm 3.  
-Dự án tập trung vào việc phân tích yêu cầu, thiết kế hệ thống và xây dựng các chức năng hỗ trợ quản lý tòa nhà, cư dân và các dịch vụ liên quan.
+Website quản lý bán hoa được xây dựng trong khuôn khổ đồ án môn Công nghệ phần mềm - Năm 3.  
+Dự án tập trung vào việc phân tích yêu cầu, thiết kế hệ thống và xây dựng các chức năng quản lý bán hàng và khách hàng trong cửa hàng hoa.
 
 ## Công nghệ sử dụng
-- C# / ASP.NET (hoặc WinForms - tùy bạn chỉnh lại)
-- SQL Server
-- Entity Framework (nếu có)
-- HTML / CSS / Bootstrap (nếu là web)
-- Visual Studio
+- ASP.NET MVC  
+- SQL Server  
+- Entity Framework  
+- HTML / CSS / Bootstrap  
 
 ## Chức năng chính
-- Quản lý thông tin tòa nhà, tầng và căn hộ  
-- Quản lý cư dân  
-- Quản lý hợp đồng thuê / sở hữu  
-- Quản lý chi phí (điện, nước, phí dịch vụ)  
-- Phân quyền người dùng (quản lý, nhân viên)  
-- Thống kê và báo cáo  
+- Quản lý sản phẩm (thêm, sửa, xóa hoa)  
+- Quản lý đơn hàng  
+- Quản lý khách hàng  
+- Phân quyền người dùng (nhân viên, quản lý)  
+- Thống kê doanh thu  
 
 ## Quy trình phát triển
 - Phân tích yêu cầu hệ thống  
@@ -27,13 +25,12 @@ Dự án tập trung vào việc phân tích yêu cầu, thiết kế hệ thố
 - Làm việc nhóm và phân chia công việc  
 
 ## Cấu trúc project
-- `/code` : Chứa source code hệ thống  
-- `/database.sql` : File tạo database và dữ liệu mẫu  
+- `/code` : Chứa source code website  
+- `/database.sql` : File script tạo database và dữ liệu mẫu  
 
 ## Nhóm thực hiện
-- Nhóm: [Số lượng thành viên]  
-- Môn: Công nghệ phần mềm  
-- Trường: [Tên trường của bạn]  
+- Nhóm 3 người  
+- Môn: Công nghệ phần mềm - Đại học Công Thương TP.HCM  
 - Năm học: 2025 - 2026  
 
 ## Cài đặt và chạy dự án
@@ -41,25 +38,30 @@ Dự án tập trung vào việc phân tích yêu cầu, thiết kế hệ thố
 **Yêu cầu:** Visual Studio 2019/2022, SQL Server, SQL Server Management Studio (SSMS)
 
 1. Clone repo về máy
-   
-3. Tạo database
-- Mở SSMS, tạo database mới (ví dụ: BuildingManagement)  
+
+2. Tạo database
+- Mở SSMS, tạo database mới tên `FlowerShop`  
 - Mở file `database.sql` trong repo  
 - Chạy toàn bộ script để tạo bảng và dữ liệu  
 
 3. Cập nhật connection string
-- Mở file cấu hình (Web.config / App.config)  
+- Mở file `Web.config` trong project  
 - Tìm phần `<connectionStrings>`  
-- Cập nhật Data Source theo SQL Server trên máy  
-- Đảm bảo đúng tên database  
+- Cập nhật `Data Source` theo SQL Server trên máy  
+- Đảm bảo `Initial Catalog = FlowerShop`  
 
 4. Mở và chạy project
 - Mở file `.sln` bằng Visual Studio  
-- Restore NuGet Packages  
-- Nhấn Ctrl + F5 để chạy  
+- Chuột phải vào Solution → Restore NuGet Packages  
+- Nhấn `Ctrl + F5` để chạy  
 
 ## Định hướng phát triển
 - Cải thiện giao diện người dùng (UI/UX)  
+- Bổ sung chức năng giỏ hàng và thanh toán  
 - Tối ưu hiệu năng hệ thống  
-- Mở rộng chức năng quản lý  
 - Hoàn thiện phân quyền và bảo mật  
+
+## Vai trò cá nhân
+- Tham gia thiết kế giao diện website  
+- Xây dựng một số chức năng cơ bản  
+- Hỗ trợ thiết kế cơ sở dữ liệu  
